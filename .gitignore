@@ -1,0 +1,5 @@
+node_modules
+unit_tests
+e2e
+vendor
+.DS_Store
