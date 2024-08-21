@@ -1,0 +1,71 @@
+------------- vvvv PRZYKŁAD vvvv ----------------
+Feature: System oceny wydarzeń
+
+  Scenario: Użytkownik ocenia wydarzenie
+    Given Jestem na stronie wydarzenia
+    When Wybieram ocenę dla "obsługi"
+    And Wybieram ocenę dla "kompletności"
+    And Wybieram ocenę dla "dostosowania do dzieci"
+    And Potwierdzam ocenę
+    Then Moja ocena jest zapisana
+    And Widzę podsumowanie ocen dla wydarzenia
+
+  Scenario: Administrator przegląda oceny
+    Given Jestem zalogowany jako administrator
+    When Wchodzę w panel administracyjny
+    And Wybieram "Oceny"
+    Then Widzę listę ocen
+    And Mogę filtrować oceny po kryteriach
+    And Mogę pobierać statystyki ocen
+
+  Scenario: Administrator zarządza ocenami
+    Given Jestem zalogowany jako administrator
+    When Wchodzę w panel administracyjny
+    And Wybieram "Oceny"
+    And Wybieram ocenę do edycji
+    Then Mogę zmodyfikować ocenę
+    And Mogę usunąć ocenę
+
+------------- ^^^^ PRZYKŁAD ^^^^ -----------------
+
+Feature: User votes the course/lesson
+  User can vote on course/lesson
+
+  Scenario: User votes the course/lesson
+    Given User is RegularUser
+    And User is on Voting Page
+    When User is providing the vote 
+    Then User should see Thank you message
+
+Feature: Admin panel
+  Scenario: Admin logs in
+    Given Admin is on the login page
+    And UserName and Password are provided
+    And UserName and Password match Login Data
+    Then Admin gets redirected to Admin Panel
+
+  Scenario: Admin logs out
+    Given Admin is logged in
+    And Admin clicks Logout link
+    Then Admin gets redirected to Login Page
+
+
+  Scenario: Admin views the Admin Panel after login
+    Given Admin is logged in
+    Then Admin sees the recent votes
+    Then Admin sees the links to pages
+    * Logout
+    * add course
+    * add lesson
+    * add user
+    * remove course
+    * remove lesson
+    * remove user
+
+
+  Scenario: Admin adds course
+    Given Admin is logged in
+    Given Admin clicks Add Course link
+    Given Course Details are provided
+    Then 
+
