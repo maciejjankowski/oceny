@@ -10,6 +10,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ocena = $_POST["ocena"];
     $uwagi = $_POST["uwagi"];
     $imie_nazwisko = $_POST["imie_nazwisko"];
+
+    $pdo = new PDO('mysql:host=localhost;dbname=nazwa_bazy', 'uzytkownik', 'haslo');
+
+    // Pobranie aktualnej daty
+    $data = date('Y-m-d');
+    
+    // Wprowadzenie oceny do bazy danych
+    $stmt = $pdo->prepare( "INSERT INTO Bewertung (kurs_id, Komentar, Data, Ocena) 
+                            VALUES (:kurs_id, :komentarz, :data, :ocena)");
+    $stmt->execute([
+        ':kurs_id' => $id_kursu,
+        ':komentarz' => $uwagi,
+        ':data' => $data, 
+        ':ocena' => $ocena
+    ]);
 ?>
 <h1>Dziękuję za opinię</h1>
 <h2>Twoja opinia:</h2>
