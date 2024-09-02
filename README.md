@@ -1,6 +1,6 @@
 # oceny
 ## Zadanie
-Opracowanie interfejsu do oceny liczby odwiedzających i opinii na temat wydarzeń, ofert itp. TJP. Ma zostać opracowana aplikacja webowa. Wykorzystane ma zostać terminal/kiosk
+Opracowanie interfejsu do oceny liczby odwiedzających i opinii na temat wydarzeń, ofert itp. Ma zostać opracowana aplikacja webowa. Wykorzystane ma zostać terminal/kiosk
 
 ## Opis
 Opracowany zostanie graficzny interfejs, który będzie odpowiedni do zbierania opinii (obsługa, kompletność, dostosowanie do dzieci). Rozwój statycznej strony HTML jako przykładowej wersji. Opracowanie skryptów, bazy danych/tabeli itp. do przechowywania opinii. Opracowanie interfejsu redakcyjnego do pobierania i statystycznej analizy (według kryteriów) opinii i liczby odwiedzających. Rozszerzenie interfejsu redakcyjnego do zarządzania zebranymi opiniami.
