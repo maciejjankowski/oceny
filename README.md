@@ -12,8 +12,6 @@ Opracowany zostanie graficzny interfejs, który będzie odpowiedni do zbierania 
 - Stworzenie konspektu, jak zrealizujesz zadanie
     - Zaprojektować [model danych](data/schema.sql)
     - Opisanie zachowania aplikacji zwykłym tekstem
-        - [przykładowy opis](_inne/bdd/opis.txt) - według formatu [gherkin](https://cucumber.io/docs/guides/overview/) ([gherkin - składnia](https://cucumber.io/docs/gherkin/reference/))
-        - testy end-to-end (e2e), które automatycznie sprawdzają czy aplikacja spełnia oczekiwania
 - Opracowanie grafiki
     - prosty CSS [style.css](styles.css)
 - Opracowanie statycznego przykładu
